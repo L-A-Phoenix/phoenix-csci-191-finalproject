@@ -1,0 +1,231 @@
+@layer base {
+  :root {
+    --text-body: rgb(210, 210, 210);
+    --text-header: rgb(250, 250, 250);
+    --surface-bg: rgb(15, 15, 15);
+    --surface-bg-accent: rgb(30, 30, 30);
+    --shadow-main: rgb(150, 30, 140);
+    --shadow-modal: rgb(51, 5, 66);
+    --border-default: rgb(200, 200, 200);
+    --button-main: rgb(90, 90, 90);
+    --button-hover: rgb(100, 100, 100);
+    --modal-default: rgb(70, 70, 70);
+  }
+  body.light {
+    --text-body: rgb(50, 50, 50);
+    --text-header: rgb(60, 60, 60);
+    --surface-bg: rgb(240, 240, 240);
+    --surface-bg-accent: rgb(230, 230, 230);
+    --shadow-main: rgb(0, 0, 0);
+    --border-default: rgb(100, 100, 100);
+    --button-main: rgb(50, 50, 50);
+    --button-hover: rgb(60, 60, 60);
+    --hero-bg: url("../images/index-images/light-hero-bg.jpg");
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.5;
+    text-size-adjust: none;
+    hanging-punctuation: first allow-end last;
+    background-color: var(--surface-bg);
+    color: var(--text-body);
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    background-color: var(--button-main);
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: var(--shadow-main);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.25rem 0.25rem;
+  background: var(--surface-bg);
+  color: var(--border-default);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+/*Page Basics*/
+#page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+#header-links {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+#theme-toggle {
+  box-shadow: var(--shadow-main) 0rem 0rem 1rem;
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Articles*/
+#about {
+}
+#projects {
+}
+#skills {
+}
+#contact {
+}
+#resume {
+}
+
+/*Project Modals*/
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 15rem;
+  min-width: 20rem;
+  box-shadow: var(--shadow-main) 0rem 0.25rem 0.2rem;
+  background-color: var(--surface-bg);
+  border-radius: 1rem;
+  transform: scale(1);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+.project-card:hover,
+.project-card:focus-visible {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 16px var(--shadow-main);
+  background-color: var(--surface-bg-accent);
+}
+#main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+#project-modal {
+  margin: auto;
+  background-color: var(--button-main);
+  box-shadow: 0 8px 16px var(--shadow-modal);
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 35rem;
+  max-height: 15rem;
+}
+#modal-close {
+  background-color: var(--button-main);
+}
+#modal-close:hover {
+  background-color: var(--button-hover);
+}
