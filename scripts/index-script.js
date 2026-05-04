@@ -1,24 +1,24 @@
+//Modal Code vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 const projects = [
   {
     title: "Project 1",
-    details:
-      "Aim Trainer built in Java using JOptionPane. It creates a clickeble grid panel and uses the dateTime module to keep score",
+    details: "A replication of the masalamt website built using HTML and CSS.",
     link_text: "View Project",
-    href: "",
+    href: "https://github.com/L-A-Phoenix/phoenix-csci-191-project1.git",
   },
   {
     title: "Project 2",
     details:
-      "Encryption and Decryption of text with multiple algorithms for each, built in Java.",
+      "All of my projects I have created grouped up in a single website built using HTML, CSS, and JavaScript.",
     link_text: "View Project",
-    href: "",
+    href: "https://github.com/L-A-Phoenix/phoenix-csci-191-project2.git",
   },
   {
     title: "Project 3",
     details:
-      "A Roblox game built in Roblox Studio using Lua. It is a tower defense game where you gamble for towers and play through the story",
+      "A website built using HTML, CSS, and JavaScript that is used as practive throughout the semester.",
     link_text: "View Project",
-    href: "",
+    href: "https://github.com/L-A-Phoenix/phoenix-csci-191-practice.git",
   },
 ];
 
@@ -59,3 +59,19 @@ modal_close.addEventListener("click", function () {
 modal.addEventListener("close", function () {
   document.body.style.overflow = "";
 });
+//Modal Code ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//Theme Code vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+let themeButton = document.querySelector("#theme-toggle");
+let hero = document.querySelector("#hero");
+
+function handleClick() {
+  if (document.body.classList.contains("light")) {
+    themeButton.textContent = "☀️";
+  } else {
+    themeButton.textContent = "🌙";
+  }
+  document.body.classList.toggle("light");
+}
+
+themeButton.addEventListener("click", handleClick);
+//Theme Code ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

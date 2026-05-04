@@ -15,18 +15,18 @@
       <button type="button" id="modal-close">Close</button>
       <h2 id="modal-title"></h2>
       <p id="modal-details"></p>
-      <a id="modal-link"></a>
+      <a id="modal-link" class="bounce"></a>
     </dialog>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header id="page-header">
       <nav aria-label="primary-navigation">
         <ul id="header-links">
-          <li><a href="./" aria-current="page">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#resume">Resume</a></li>
+          <li class="bounce"><a href="./" aria-current="page">Home</a></li>
+          <li class="bounce"><a href="#about">About</a></li>
+          <li class="bounce"><a href="#projects">Projects</a></li>
+          <li class="bounce"><a href="#skills">Skills</a></li>
+          <li class="bounce"><a href="#contact">Contact</a></li>
+          <li class="bounce"><a href="#resume">Resume</a></li>
         </ul>
       </nav>
       <button id="theme-toggle" type="button" aria-label="Theme Toggle">
@@ -34,53 +34,107 @@
       </button>
     </header>
     <main id="main-content">
-      <section id="hero">
-        <h2 class="central-text">Lorenzo Phoenix</h2>
-        <p>Programmer. Designer. Pianist.</p>
-        <button>Personal E-Portfolio</button>
-      </section>
-      <article id="about">
-        <h2>About Me</h2>
-        <p></p>
-      </article>
-      <article id="projects">
-        <h2>My Projects</h2>
-        <ul id="project-list">
-          <li>
-            <article>
-              <button type="button" class="project-card" data-index="0">
-                <img src="./images/project1-icon.png" alt="Project 1 Icon" />
-                <h2>Aim Trainer</h2>
-              </button>
-            </article>
-          </li>
-          <li>
-            <article>
-              <button type="button" class="project-card" data-index="1">
-                <img src="./images/project2-icon.png" alt="Project 2 Icon" />
-                <h2>Encryption</h2>
-              </button>
-            </article>
-          </li>
-          <li>
-            <article>
-              <button type="button" class="project-card" data-index="2">
-                <img src="./images/project3-icon.png" alt="Project 3 Icon" />
-                <h2>Roblox</h2>
-              </button>
-            </article>
-          </li>
-        </ul>
-      </article>
-      <article id="skills">
-        <h2>My Skills</h2>
-      </article>
-      <article id="contact">
-        <h2>Contact Me</h2>
-      </article>
-      <article id="resume">
-        <h2>Resume</h2>
-      </article>
+      <div class="gradient-border">
+        <section id="hero">
+          <h1 class="central-text">Lorenzo Phoenix</h1>
+          <p>Programmer. Designer. Pianist.</p>
+        </section>
+      </div>
+      <div id="content-sections">
+        <article id="about">
+          <h2>About Me</h2>
+          <p>
+            I am a software engineer and a current freshmen at the University of
+            Montana. I excell at programming, designing, and working with others
+            in a group setting.
+          </p>
+        </article>
+        <img id="headshot-image" src="./images/headshot.png" alt="Headshot" />
+        <article id="projects">
+          <h2>My Projects</h2>
+          <ul id="project-list">
+            <li>
+              <article>
+                <button type="button" class="project-card" data-index="0">
+                  <img
+                    src="./images/project1-icon.webp"
+                    class="modal-image"
+                    alt="Project 1 Icon"
+                  />
+                  <h3>Masala Replication</h3>
+                </button>
+              </article>
+            </li>
+            <li>
+              <article>
+                <button type="button" class="project-card" data-index="1">
+                  <img
+                    src="./images/project2-icon.png"
+                    class="modal-image"
+                    alt="Project 2 Icon"
+                  />
+                  <h3>Project Grouping</h3>
+                </button>
+              </article>
+            </li>
+            <li>
+              <article>
+                <button type="button" class="project-card" data-index="2">
+                  <img
+                    src="./images/project3-icon.png"
+                    class="modal-image"
+                    alt="Project 3 Icon"
+                  />
+                  <h3>Course Practicing</h3>
+                </button>
+              </article>
+            </li>
+          </ul>
+        </article>
+        <article id="skills">
+          <h2>My Skills</h2>
+          <ul>
+            <li>-Python</li>
+            <li>-Java</li>
+            <li>-JavaScript</li>
+            <li>-HTML</li>
+            <li>-CSS</li>
+          </ul>
+        </article>
+        <article id="contact">
+          <h2>Contact Me</h2>
+          <div class="flex justify-center">
+            <section id="contact-info">
+              <label for="first-name-input">First Name:</label>
+              <input
+                class="border border-inherit rounded-lg p-1"
+                type="text"
+                id="first-name-input"
+                placeholder="First Name"
+                required
+              />
+              <label for="email-input">Email:</label>
+              <input
+                class="border border-inherit rounded-lg p-1"
+                type="email"
+                id="email-input"
+                placeholder="name@example.com"
+                required
+              />
+              <label for="message-input">Message:</label>
+              <textarea
+                id="message-input"
+                placeholder="Your Message"
+                class="border border-inherit rounded-lg p-1"
+              ></textarea>
+              <button>Send Message</button>
+            </section>
+          </div>
+        </article>
+        <article id="resume">
+          <a href="./images/Resume PDF.pdf">My Resume</a>
+        </article>
+      </div>
     </main>
   </body>
 </html>
