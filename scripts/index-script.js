@@ -4,21 +4,21 @@ const projects = [
     title: "Project 1",
     details: "A replication of the masalamt website built using HTML and CSS.",
     link_text: "View Project",
-    href: "https://github.com/L-A-Phoenix/phoenix-csci-191-project1.git",
+    href: "",
   },
   {
     title: "Project 2",
     details:
       "All of my projects I have created grouped up in a single website built using HTML, CSS, and JavaScript.",
     link_text: "View Project",
-    href: "https://github.com/L-A-Phoenix/phoenix-csci-191-project2.git",
+    href: "",
   },
   {
     title: "Project 3",
     details:
       "A website built using HTML, CSS, and JavaScript that is used as practive throughout the semester.",
     link_text: "View Project",
-    href: "https://github.com/L-A-Phoenix/phoenix-csci-191-practice.git",
+    href: "",
   },
 ];
 

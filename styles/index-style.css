@@ -127,17 +127,11 @@
   body {
     font-size: 0.75rem;
   }
-  #project-list {
-    grid-template-columns: 2fr;
-  }
 }
 /* Phone styles */
 @media (max-width: 600px) {
   body {
     font-size: 0.5rem;
-  }
-  #project-list {
-    grid-template-columns: 1fr;
   }
 }
 
